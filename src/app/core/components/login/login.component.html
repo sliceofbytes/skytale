@@ -1,11 +1,7 @@
 <div class="sign-in-container">
-
-  <mat-card class="sign-in-card">
-    <mat-toolbar color="primary">
-      <span>Sign In</span>
-    </mat-toolbar>
-    <mat-card-content *ngIf="loginForm" class="sign-in-card-content">
-      <form [formGroup]="loginForm">
+  <mat-tab-group mat-stretch-tabs backgroundColor="primary" color="accent" class="mat-elevation-z2">
+    <mat-tab label="Login">
+      <form [formGroup]="loginForm" *ngIf="loginForm" class="sign-in-form">
         <mat-form-field class="sign-in-card-form-field">
           <input matInput placeholder="Email" formControlName="email">
         </mat-form-field><br>
@@ -13,10 +9,24 @@
           <input matInput placeholder="Password" formControlName="password">
         </mat-form-field>
         <mat-card-actions class="card-actions" fxLayoutAlign="flex-end">
-          <button mat-raised-button color="accent" [disabled]="!isValid()" (click)="onSubmit()">SIGN IN
+          <button mat-raised-button color="accent" [disabled]="!isValid()" (click)="signIn()">SIGN IN
           </button>
         </mat-card-actions>
       </form>
-    </mat-card-content>
-  </mat-card>
+    </mat-tab>
+    <mat-tab label="Register">
+      <form [formGroup]="loginForm" *ngIf="registerForm" class="sign-in-form">
+        <mat-form-field class="sign-in-card-form-field">
+          <input matInput placeholder="Email" formControlName="email">
+        </mat-form-field><br>
+        <mat-form-field class="sign-in-card-form-field">
+          <input matInput placeholder="Password" formControlName="password">
+        </mat-form-field>
+        <mat-card-actions class="card-actions" fxLayoutAlign="flex-end">
+          <button mat-raised-button color="accent" [disabled]="!isValid()" (click)="register()">Register
+          </button>
+        </mat-card-actions>
+      </form>
+    </mat-tab>
+  </mat-tab-group>
 </div>

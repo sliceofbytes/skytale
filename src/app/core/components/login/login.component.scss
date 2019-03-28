@@ -5,14 +5,26 @@
   align-items: center;
 }
 
-.sign-in-card {
-  min-width: 25rem;
-  padding: 0;
+.sign-in-form {
+  padding: 1.0em;
 }
 
-.sign-in-card-content {
-  padding: 1.5rem;
+.mat-tab {
+  padding: 10em;
 }
+
+.sign-in-tab-content {
+  padding: 1em !important;
+}
+
+.mat-tab-body {
+  padding: 1em !important;
+}
+
+.mat-tab-body-wrapper {
+  padding: 1.0rem;
+}
+
 
 .sign-in-card-form-field {
   width: 100%;
