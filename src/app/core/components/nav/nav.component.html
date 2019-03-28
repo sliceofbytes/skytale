@@ -1,0 +1,32 @@
+<mat-sidenav-container>
+
+  <mat-sidenav #sidenav mode="over">
+
+    <mat-toolbar>
+      <mat-toolbar-row>
+        <h2 class="toolbar-title">Skytale</h2>
+      </mat-toolbar-row>
+    </mat-toolbar>
+
+    <mat-nav-list>
+
+      <h2 matSubheader> </h2>
+
+      <a mat-list-item routerLink="/" style="height: 0;"></a>
+
+      <mat-divider></mat-divider>
+
+      <h2 matSubheader> </h2>
+
+
+
+    </mat-nav-list>
+
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <app-navigation-bar (toggleSidenav)="sidenav.toggle()"> </app-navigation-bar>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+
+</mat-sidenav-container>
