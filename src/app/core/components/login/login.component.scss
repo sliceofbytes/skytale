@@ -1,0 +1,24 @@
+.sign-in-container {
+  height: unquote('Calc(100vh - 65px)');
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+.sign-in-card {
+  min-width: 25rem;
+  padding: 0;
+}
+
+.sign-in-card-content {
+  padding: 1.5rem;
+}
+
+.sign-in-card-form-field {
+  width: 100%;
+}
+
+.card-actions {
+  padding: 8px 8px;
+  margin-bottom: 0;
+}

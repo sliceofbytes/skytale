@@ -1,0 +1,22 @@
+<div class="sign-in-container">
+
+  <mat-card class="sign-in-card">
+    <mat-toolbar color="primary">
+      <span>Sign In</span>
+    </mat-toolbar>
+    <mat-card-content *ngIf="loginForm" class="sign-in-card-content">
+      <form [formGroup]="loginForm">
+        <mat-form-field class="sign-in-card-form-field">
+          <input matInput placeholder="Email" formControlName="email">
+        </mat-form-field><br>
+        <mat-form-field class="sign-in-card-form-field">
+          <input matInput placeholder="Password" formControlName="password">
+        </mat-form-field>
+        <mat-card-actions class="card-actions" fxLayoutAlign="flex-end">
+          <button mat-raised-button color="accent" [disabled]="!isValid()" (click)="onSubmit()">SIGN IN
+          </button>
+        </mat-card-actions>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
