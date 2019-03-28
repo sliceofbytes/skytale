@@ -6,7 +6,7 @@
           <input matInput placeholder="Email" formControlName="email">
         </mat-form-field><br>
         <mat-form-field class="sign-in-card-form-field">
-          <input matInput placeholder="Password" formControlName="password">
+          <input matInput type="password" placeholder="Password" formControlName="password">
         </mat-form-field>
         <mat-card-actions class="card-actions" fxLayoutAlign="flex-end">
           <button mat-raised-button color="accent" [disabled]="!isValid()" (click)="signIn()">SIGN IN
@@ -20,7 +20,7 @@
           <input matInput placeholder="Email" formControlName="email">
         </mat-form-field><br>
         <mat-form-field class="sign-in-card-form-field">
-          <input matInput placeholder="Password" formControlName="password">
+          <input matInput type="password" placeholder="Password" formControlName="password">
         </mat-form-field>
         <mat-card-actions class="card-actions" fxLayoutAlign="flex-end">
           <button mat-raised-button color="accent" [disabled]="!isValid()" (click)="register()">Register
