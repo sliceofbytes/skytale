@@ -5,10 +5,18 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { AngularMaterialModule } from '@shared/angular-material.module';
 import { NavigationBarComponent } from '@core/components/navigation-bar/navigation-bar.component';
 import { NavComponent } from './components/nav/nav.component';
+import { environment } from '@env/environment';
+import { AngularFireModule } from '@angular/fire';
 
 @NgModule({
   declarations: [NavigationBarComponent, NavComponent],
-  imports: [AngularMaterialModule, CommonModule, FlexLayoutModule, RouterModule],
+  imports: [
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularMaterialModule,
+    CommonModule,
+    FlexLayoutModule,
+    RouterModule
+  ],
   exports: [NavigationBarComponent, NavComponent]
 })
 export class CoreModule {}
