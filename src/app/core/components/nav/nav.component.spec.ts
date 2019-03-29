@@ -1,5 +1,7 @@
+import { RouterTestingModule } from '@angular/router/testing';
+import { NavigationBarComponent } from '@core/components';
+import { AngularMaterialModule } from '@shared/angular-material.module';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { NavComponent } from './nav.component';
 
 describe('NavComponent', () => {
@@ -8,9 +10,9 @@ describe('NavComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NavComponent ]
-    })
-    .compileComponents();
+      imports: [AngularMaterialModule, RouterTestingModule],
+      declarations: [NavComponent, NavigationBarComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
