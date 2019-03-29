@@ -11,4 +11,6 @@ export class NavigationBarComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {}
+
+  logout() {}
 }
